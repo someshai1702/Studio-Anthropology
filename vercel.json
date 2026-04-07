@@ -1,0 +1,30 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact-us", "destination": "/contact-us.html" },
+    { "source": "/works", "destination": "/works.html" },
+    { "source": "/work-details/exploid-game", "destination": "/work-details/exploid-game.html" },
+    { "source": "/work-details/fashion-brand", "destination": "/work-details/fashion-brand.html" },
+    { "source": "/work-details/leardo-ecom", "destination": "/work-details/leardo-ecom.html" },
+    { "source": "/work-details/taskify-app", "destination": "/work-details/taskify-app.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
