@@ -4,7 +4,22 @@
 <html lang="en" data-redirect-timezone="1">
 
 <!-- Mirrored from studioanthropology.framer.website/about by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2026 16:47:59 GMT -->
-<head>
+<head><style>
+/* Force images to be visible */
+[data-framer-appear-id], 
+img[src*="/images/"],
+.framer-image,
+[data-framer-background-image-wrapper] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/* Remove Framer animations */
+[data-framer-appear-id] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+}
+</style>
 	<meta charset="utf-8">
 	
 	
