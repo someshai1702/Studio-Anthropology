@@ -6,6 +6,19 @@
 <!-- Mirrored from studioanthropology.framer.website/about by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2026 16:47:59 GMT -->
 <head>
 	<meta charset="utf-8">
+        <!-- Fallback: If Framer animation scripts do not load, make content visible after timeout -->
+        <script>
+        (function() {
+            var timeout = setTimeout(function() {
+                var animatedElements = document.querySelectorAll("[data-framer-appear-id]");
+                animatedElements.forEach(function(el) {
+                    el.style.opacity = "1";
+                    el.style.transform = "none";
+                    el.style.pointerEvents = "auto";
+                });
+            }, 3000); // Wait 3 seconds for Framer to initialize
+        })();
+        </script>
 	
 	
 	<script>try{if(localStorage.get("__framer_force_showing_editorbar_since")){const n=document.createElement("link");n.rel = "modulepreload";n.href="https://framer.com/edit/init.mjs";document.head.appendChild(n)}}catch(e){}</script>
@@ -33,6 +46,9 @@
     <meta name="twitter:image" content="https/images/BBnHWmq6QtNzJzKP587IM7MU7Ag.jpeg">
 	
 	<style data-framer-font-css>@font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F }
+	/* Fallback styles to ensure content is visible if Framer animations fail to load */
+	[data-framer-appear-id] { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
+	</style><!-- Start of headEnd -->
 @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116 }
 @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+1F00-1FFF }
 @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2"); font-display: swap; font-style: normal; font-weight: 400; unicode-range: U+0370-03FF }
