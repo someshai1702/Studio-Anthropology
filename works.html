@@ -5,6 +5,25 @@
 
 <!-- Mirrored from studioanthropology.framer.website/works by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2026 16:47:59 GMT -->
 <head><style>
+/* FORCE ALL IMAGES VISIBLE - CRITICAL */
+img, 
+[data-framer-background-image-wrapper],
+[data-framer-background-image-wrapper] div,
+[style*="background-image"],
+div[style*="background"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+/* Fix Framer appear IDs */
+[data-framer-appear-id] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    will-change: auto !important;
+}
+</style>
+<script>window.__framer_disable_appear_effects_optimization__ = true;</script><style>
 /* Force images to be visible */
 [data-framer-appear-id], 
 img[src*="/images/"],
